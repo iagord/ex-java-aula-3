@@ -18,7 +18,7 @@ public class Ex08 {
 		System.out.printf("Digite o valor de mais um lado do triângulo: ");
 		v3 = ler.nextDouble();
 		
-		if ((v1 + v2 > v3) && (v2 + v3 > v1) && (v3 + v1 > v2)) {
+		if ((v1 + v2 > v3) || (v2 + v3 > v1) || (v3 + v1 > v2)) {
 			if ((v1 == v2) && (v1 == v3) && (v2 == v3)) {
 		        System.out.printf("Seu triânguo é equilátero!");
 		        }
