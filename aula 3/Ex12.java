@@ -18,10 +18,10 @@ public class Ex12 {
 		m = (p1 + (2 * p2)) / 3;
 		
 		if (m >= 5) {
-			System.out.printf("Sua média foi %f e você foi Aprovado!");
+			System.out.printf("Sua média foi %f.2f e você foi Aprovado!");
 		}
 		else if (m < 5) {
-			System.out.printf("Sua média foi %f e você foi Reprovado.");
+			System.out.printf("Sua média foi %f.2f e você foi Reprovado.");
 		}
 		
 		ler.close();
