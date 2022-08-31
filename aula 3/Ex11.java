@@ -18,7 +18,7 @@ public class Ex11 {
 		System.out.printf("Digite o tempo de percurso: ");
 		t = ler.nextDouble();
 		
-		v = v0 + (a * t) / 3.6;
+		v = (v0 + (a * t)) * 3.6;
 		
 		if (v <= 40) {
 			System.out.printf("Veículo muito lento.");
