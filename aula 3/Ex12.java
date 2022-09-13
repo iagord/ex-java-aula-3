@@ -2,26 +2,28 @@ package ddd;
 
 import java.util.Scanner;
 
-public class Ex12 {
+public class Ex05 {
 
 	public static void main(String[] args) {
 		Scanner ler = new Scanner(System.in);
 		
-		double p1, p2, m;
+		int b, a, area;
 		
-		System.out.printf("Digite sua p1: ");
-		p1 = ler.nextDouble();
+		System.out.printf("Digite a base: ");
+		b = ler.nextInt();
 		
-		System.out.printf("Digite sua p2: ");
-		p2 = ler.nextDouble();
+		System.out.printf("Digite a altura: ");
+		a = ler.nextInt();
 		
-		m = (p1 + (2 * p2)) / 3;
+		area = b * a;
 		
-		if (m >= 5) {
-			System.out.printf("Sua média foi %.2f e você foi Aprovado!");
+		if (area > 100) {
+			System.out.println(area);
+			System.out.printf("Terreno Grande");
 		}
-		else if (m < 5) {
-			System.out.printf("Sua média foi %.2f e você foi Reprovado.");
+		else if (area < 100) {
+			System.out.println(area);
+			System.out.printf("Terreno Pequeno");
 		}
 		
 		ler.close();

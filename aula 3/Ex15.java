@@ -2,56 +2,34 @@ package ddd;
 
 import java.util.Scanner;
 
-public class Ex15 {
+public class Ex08 {
 
 	public static void main(String[] args) {
 		Scanner ler = new Scanner(System.in);
 		
-		double lado, base, area, altura, raio;
+		double v1, v2, v3;
 		
-		int opcao;
+		System.out.printf("Digite o valor de um lado do triângulo: ");
+		v1 = ler.nextDouble();
 		
-		System.out.println("-------------Calculadora de área-------------");
-		System.out.println("1 - Triângulo");
-		System.out.println("2 - Quadrado");
-		System.out.println("3 - Retângulo");
-		System.out.println("4 - Círculo");
-		System.out.println("5 - Fim do processo");
-		System.out.println("---------------------------------------------");
+		System.out.printf("Digite o valor de outro lado do triângulo: ");
+		v2 = ler.nextDouble();
 		
-		System.out.printf("Digite sua opção: ");
-		opcao = ler.nextInt();
+		System.out.printf("Digite o valor de mais um lado do triângulo: ");
+		v3 = ler.nextDouble();
 		
-		if (opcao == 1) {
-			System.out.printf("Digite o valor da base: ");
-			base = ler.nextDouble();
-			System.out.printf("Digite o valor da altura: ");
-			altura = ler.nextDouble();
-			area = (base * altura) / 2;
-			System.out.printf("A área do triângulo é %.2f", area);
-		}
-		else if (opcao == 2) {
-			System.out.printf("Digite o valor do lado: ");
-			lado = ler.nextDouble();
-			area = lado * lado;
-			System.out.printf("A área do quadrado é %.2f", area);
-		}
-		else if (opcao == 3) {
-			System.out.printf("Digite o valor da base: ");
-			base = ler.nextDouble();
-			System.out.printf("Digite o valor da altura: ");
-			altura = ler.nextDouble();
-			area = base * altura;
-			System.out.printf("A área do retângulo é %.2f", area);
-		}
-		else if (opcao == 4) {
-			System.out.printf("Digite o valor do raio: ");
-			raio = ler.nextDouble();
-			area = 3.14 * (raio * raio);
-			System.out.printf("A área do circulo é %.2f", area);
+		if ((v1 + v2 > v3) || (v2 + v3 > v1) || (v3 + v1 > v2)) {
+			if ((v1 == v2) && (v1 == v3) && (v2 == v3)) {
+		        System.out.printf("Seu triânguo é equilátero!");
+		        }
+			else if ((v1 != v2) && (v1 != v3) && (v2 != v3)) {
+				System.out.printf("Seu triângulo é escaleno!");
+				}
+		    else {
+		        System.out.printf("Seu triângulo é isósceles!");
+		        }
 		}
 		ler.close();
-
 
 	}
 

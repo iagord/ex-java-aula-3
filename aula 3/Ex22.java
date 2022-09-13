@@ -2,53 +2,57 @@ package ddd;
 
 import java.util.Scanner;
 
-public class Ex21 {
+public class Ex15 {
 
 	public static void main(String[] args) {
 		Scanner ler = new Scanner(System.in);
 		
-		int v1, v2, v3;
+		double lado, base, area, altura, raio;
 		
-		System.out.printf("Digite o primeiro valor: ");
-		v1 = ler.nextInt();
+		int opcao;
 		
-		System.out.printf("Digite o segundo valor: ");
-		v2 = ler.nextInt();
+		System.out.println("-------------Calculadora de área-------------");
+		System.out.println("1 - Triângulo");
+		System.out.println("2 - Quadrado");
+		System.out.println("3 - Retângulo");
+		System.out.println("4 - Círculo");
+		System.out.println("5 - Fim do processo");
+		System.out.println("---------------------------------------------");
 		
-		System.out.printf("Digite o terceiro valor: ");
-		v3 = ler.nextInt();
+		System.out.printf("Digite sua opção: ");
+		opcao = ler.nextInt();
 		
-		if ((v1 > v2 ) && (v1 > v3) && (v2 > v3)) {
-			System.out.print(v1);
-			System.out.print(v2);
-			System.out.print(v3);
+		if (opcao == 1) {
+			System.out.printf("Digite o valor da base: ");
+			base = ler.nextDouble();
+			System.out.printf("Digite o valor da altura: ");
+			altura = ler.nextDouble();
+			area = (base * altura) / 2;
+			System.out.printf("A área do triângulo é %.2f", area);
 		}
-		if ((v1 > v2 ) && (v1 > v3) && (v3 > v2)) {
-			System.out.print(v1);
-			System.out.print(v3);
-			System.out.print(v2);
+		else if (opcao == 2) {
+			System.out.printf("Digite o valor do lado: ");
+			lado = ler.nextDouble();
+			area = lado * lado;
+			System.out.printf("A área do quadrado é %.2f", area);
 		}
-		else if ((v2 > v1 ) && (v2 > v3) && (v1 > v3)) {
-			System.out.print(v2);
-			System.out.print(v1);
-			System.out.print(v3);
+		else if (opcao == 3) {
+			System.out.printf("Digite o valor da base: ");
+			base = ler.nextDouble();
+			System.out.printf("Digite o valor da altura: ");
+			altura = ler.nextDouble();
+			area = base * altura;
+			System.out.printf("A área do retângulo é %.2f", area);
 		}
-		else if ((v2 > v1 ) && (v2 > v3) && (v3 > v1)) {
-			System.out.print(v2);
-			System.out.print(v3);
-			System.out.print(v1);
-		}
-		else if ((v3 > v1 ) && (v3 > v2) && (v2 > v1)) {
-			System.out.print(v3);
-			System.out.print(v2);
-			System.out.print(v1);
-		}
-		else if ((v3 > v1 ) && (v3 > v2) && (v1 > v2)) {
-			System.out.print(v3);
-			System.out.print(v1);
-			System.out.print(v2);
+		else if (opcao == 4) {
+			System.out.printf("Digite o valor do raio: ");
+			raio = ler.nextDouble();
+			area = 3.14 * (raio * raio);
+			System.out.printf("A área do circulo é %.2f", area);
 		}
 		ler.close();
+
+
 	}
 
 }

@@ -2,29 +2,28 @@ package ddd;
 
 import java.util.Scanner;
 
-public class Ex16 {
+public class Ex09 {
 
 	public static void main(String[] args) {
 		Scanner ler = new Scanner(System.in);
 		
-		double a, b, c;
+		double v1, v2, v3;
 		
-		System.out.printf("Digite o valor A: ");
-		a = ler.nextDouble();
+		System.out.printf("Digite um valor: ");
+		v1 = ler.nextDouble();
 		
-		System.out.printf("Digite o valor B: ");
-		b = ler.nextDouble();
+		System.out.printf("Digite outro valor: ");
+		v2 = ler.nextDouble();
 		
-		System.out.printf("Digite o valor C: ");
-		c = ler.nextDouble();
+		System.out.printf("Digite mais um valor: ");
+		v3 = ler.nextDouble();
 		
-		if (a + b <= c ) {
-			System.out.printf("A soma de a + b é maior que c");
-		}
+		if (v1 == ((v2 * v2) + (v3 * v3)/v1) && (v3 == (v2 * v2) + (v1 * v1)/v3) && (v2 == (v3 * v3) + (v1 * v1)/v2)) {
+		    System.out.printf("Seu triângulo é retângulo!");
+		    }
 		else {
-			System.out.printf("A some de a + b não é maior que c");
-		}
-		
+		    System.out.printf("Seu triângulo não é retângulo!");
+		    }
 		ler.close();
 
 	}
