@@ -2,42 +2,29 @@ package ddd;
 
 import java.util.Scanner;
 
-public class Ex23 {
+public class Ex16 {
 
 	public static void main(String[] args) {
 		Scanner ler = new Scanner(System.in);
 		
-		double valor;
-		int condicao;
+		double a, b, c;
 		
-		System.out.printf("Digite o preço do produto: ");
-		valor = ler.nextDouble();
+		System.out.printf("Digite o valor A: ");
+		a = ler.nextDouble();
 		
-		System.out.printf("----- Condição de pagamento -----");
-		System.out.printf("1 - À vista em dinheiro ou cheque, recebe 10% de desconto");
-		System.out.printf("2 - À vista no cartão de crédito, recebe 15% de desconto");
-		System.out.printf("3 - Em até 2x no cartão de crédito, preço normal");
-		System.out.printf("4 - 3x no cartão de crédito, 20% de juros");
-		System.out.printf("---------------------------------");
+		System.out.printf("Digite o valor B: ");
+		b = ler.nextDouble();
 		
-		System.out.printf("Digite a condição de pagamento: ");
-		condicao = ler.nextInt();
+		System.out.printf("Digite o valor C: ");
+		c = ler.nextDouble();
 		
-		if (condicao == 1) {
-			System.out.printf("Valor final: R$ %f", (valor - (valor * 0.1)));
-		}
-		else if (condicao == 2) {
-			System.out.printf("Valor final: R$ %f", (valor - (valor * 0.15)));
-		}
-		else if (condicao == 3) {
-			System.out.printf("Valor final: R$ %f", (valor / 2));
-		}
-		else if (condicao == 4) {
-			System.out.printf("Valor final: R$ %f", (((valor * 0.2) + valor) / 3));
+		if (a + b <= c ) {
+			System.out.printf("A soma de a + b é maior que c");
 		}
 		else {
-			System.out.printf("Condição inválida");
+			System.out.printf("A some de a + b não é maior que c");
 		}
+		
 		ler.close();
 
 	}
