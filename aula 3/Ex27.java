@@ -2,7 +2,7 @@ package ddd;
 
 import java.util.Scanner;
 
-public class Ex20 {
+public class Ex27 {
 
 	public static void main(String[] args) {
 		Scanner ler = new Scanner(System.in);
