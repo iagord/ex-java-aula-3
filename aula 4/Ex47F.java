@@ -1,12 +1,12 @@
 import java.util.Scanner;
 
-public class Ex47W {
+public class Ex47F {
 
 	public static void main(String[] args) {
 		Scanner ler = new Scanner(System.in);
 		
 		String novocalculo;
-		int fatorial, x, x1;
+		int fatorial, x, x1, i;
 		
 		novocalculo = "S";
 		
@@ -33,7 +33,7 @@ public class Ex47W {
 					novocalculo = ler.next();
 				}
 			}else {
-				while (x > 0) {
+				for (i=x; i>0; i--) {
 					fatorial = fatorial * x;
 					x = x - 1;					
 				}System.out.println(x1 + "! = " + fatorial);
@@ -47,8 +47,6 @@ public class Ex47W {
 					novocalculo = ler.next();
 				}
 			}
-		}
-        System.out.println("Programa Encerrado.");
-        ler.close();
+		}System.out.println("Programa Encerrado.");
 	}
 }

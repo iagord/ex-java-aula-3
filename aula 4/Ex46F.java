@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Ex46W {
+public class Ex46F {
 
 	public static void main(String[] args) {
 		Scanner ler = new Scanner(System.in);
@@ -20,7 +20,6 @@ public class Ex46W {
 				System.out.println("Digite a quantidade de números a ser comparada (deve ser maior que 0 e menor que 20): ");
 				n = ler.nextDouble();
 			}
-			i = 1;
 			xpos = 0;
 			xneg = 0;
 			xnul = 0;
@@ -28,7 +27,7 @@ public class Ex46W {
 			maior = 0;
 			menor = 0;
 			
-			while (i <= n) {
+			for (i=1; (i <= n); i++) {
 				System.out.println("Digite o " + (int) i + "º número: ");
 				x = ler.nextDouble();
 				
@@ -71,9 +70,7 @@ public class Ex46W {
 			    	}
 			    }
 				soma = soma + x;
-				i++;
 			}
-            ler.close();
 			media = soma / n;
 			porcneg = 100 * xneg / n;
 			porcpos = 100 * xpos / n;

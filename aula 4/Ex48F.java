@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Ex48W {
+public class Ex48F {
 
 	public static void main(String[] args) {
 		Scanner ler = new Scanner(System.in);
@@ -9,14 +9,12 @@ public class Ex48W {
 		
 		System.out.println("Digite um número qualquer: ");
 		x = ler.nextInt();
+
+        ler.close();
 		
-		i = 1;
-		
-		while (i <= 20) {
+		for (i=1; i<= 20; i++) {
 			y = x + i;
 			System.out.println(y);
-			i++;
 		}
-        ler.close();
 	}
 }

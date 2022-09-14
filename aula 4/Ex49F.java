@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Ex49W {
+public class Ex49F {
 
 	public static void main(String[] args) {
 		Scanner ler = new Scanner(System.in);
@@ -23,9 +23,8 @@ public class Ex49W {
 		
 		soma = 0;
 		
-		while (x <= y) {
+		for (x=1;x<=(y+1);x++) {
 			soma = soma + x;
-			x++;
 		}
 		
 		System.out.println("A soma dos valores do intervalo é: " + soma);

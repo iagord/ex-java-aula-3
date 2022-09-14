@@ -1,17 +1,16 @@
 import java.util.Scanner;
 
-public class Ex44W {
+public class Ex44F {
 
 	public static void main(String[] args) {
 		Scanner ler = new Scanner(System.in);
 		
 		double i, soma, n, maior, media;
 		
-		i = 1;
 		soma = 0;
 		maior = 0;
 		
-		while (i <= 10) {
+		for (i=1; (i <= 10); i++) {
 			System.out.println("Digite o " + (int) i + "º número positivo: ");
 			n = ler.nextDouble();
 			
@@ -26,13 +25,12 @@ public class Ex44W {
 			}
 			
 			soma = soma + n;
-			i++;
+            ler.close();
 		}
 		media = soma / (i - 1);
 		
 		System.out.println("O maior número é: " + maior);
 		System.out.println("A soma dos valores é: " + soma);
 		System.out.println("A média dos valores é: " + media);
-        ler.close();
 	}
 }
