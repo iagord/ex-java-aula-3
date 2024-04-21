@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.1.2</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.example</groupId>
+	<artifactId>demo</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>demo</name>
+	<description>Demo project for Spring Boot</description>
+	<properties>
+		<java.version>17</java.version>
+		<spring-cloud-azure.version>5.4.0</spring-cloud-azure.version>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-webflux</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.azure.spring</groupId>
+			<artifactId>spring-cloud-azure-starter-storage</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.projectreactor</groupId>
+			<artifactId>reactor-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.azure.spring</groupId>
+				<artifactId>spring-cloud-azure-dependencies</artifactId>
+				<version>${spring-cloud-azure.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+	dependencies {
+    // Dependência principal para desenvolvimento web
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    
+    // Dependência para Spring Data JPA (acesso a banco de dados)
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    
+    // Implementação de referência para Bean Validation
+    implementation 'org.hibernate.validator:hibernate-validator'
+    
+    // Suporte do Spring Boot para validação baseada em anotações
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+    
+    // APIs de validação Java (necessárias para Hibernate Validator)
+    implementation 'javax.validation:validation-api'
+    
+    // (Opcional) Thymeleaf para mecanismo de template
+    // implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    
+    // (Opcional) Spring Security para segurança da aplicação
+    // implementation 'org.springframework.boot:spring-boot-starter-security'
+    
+    // (Opcional) Spring Boot DevTools para desenvolvimento
+    // implementation 'org.springframework.boot:spring-boot-devtools'
+    
+    // (Opcional) Dependências para testes (JUnit, Mockito, Spring Test)
+    // testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    
+    // (Opcional) Processador de configuração para application.properties
+    // annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+    
+    // (Opcional) Spring Boot Actuator para monitoramento e métricas
+    // implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    
+    // (Opcional) Spring Cloud Starter OAuth2 para autenticação OAuth2
+    // implementation 'org.springframework.cloud:spring-cloud-starter-oauth2'
+    
+    // (Opcional) Spring Boot Starter Logging para logging (logback)
+    // implementation 'org.springframework.boot:spring-boot-starter-logging'
+}
+
+
+
+</project>
